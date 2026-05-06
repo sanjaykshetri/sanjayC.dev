@@ -4,6 +4,12 @@ import matter from 'gray-matter'
 
 const postsDirectory = path.join(process.cwd(), 'src/content/blog')
 
+function truncateToWords(text: string, wordLimit: number): string {
+  const words = text.trim().split(/\s+/)
+  if (words.length <= wordLimit) return text
+  return words.slice(0, wordLimit).join(' ') + '...'
+}
+
 export interface BlogPost {
   slug: string
   title: string
@@ -35,7 +41,7 @@ export function getAllPosts(): BlogPost[] {
         slug,
         title: data.title || slug,
         date: data.date || '',
-        excerpt: data.excerpt || content.substring(0, 150) + '...',
+        excerpt: data.excerpt || truncateToWords(content, 30),
         tags: data.tags || [],
         readTime,
         content,
@@ -59,7 +65,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
       slug,
       title: data.title || slug,
       date: data.date || '',
-      excerpt: data.excerpt || content.substring(0, 150) + '...',
+      excerpt: data.excerpt || truncateToWords(content, 30),
       tags: data.tags || [],
       readTime,
       content,
