@@ -6,17 +6,17 @@ import { Footer } from '@/components/layout/Footer'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Math with Meditation',
-    template: '%s | Math with Meditation',
+    default: 'Sanjay Chhetri',
+    template: '%s | Sanjay Chhetri',
   },
-  description: 'Combining mathematics education, data science, AI-powered tools, and contemplative practice. A platform for intellectual depth and inner clarity.',
-  keywords: ['mathematics', 'meditation', 'data science', 'AI', 'education', 'NLP', 'machine learning'],
-  authors: [{ name: 'Sanjay Kshetri' }],
+  description: 'Data scientist portfolio focused on machine learning, quantitative research, and behavioral AI.',
+  keywords: ['data science', 'machine learning', 'behavioral AI', 'NLP', 'quantitative research', 'trust analytics'],
+  authors: [{ name: 'Sanjay Chhetri' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://mathwithmeditation.com',
-    siteName: 'Math with Meditation',
+    url: 'https://sanjayc.dev',
+    siteName: 'Sanjay Chhetri',
   },
 }
 

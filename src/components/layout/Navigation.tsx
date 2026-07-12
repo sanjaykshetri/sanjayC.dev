@@ -9,12 +9,11 @@ import { clsx } from 'clsx'
 
 const navLinks = [
   { href: '/', label: 'Home' },
+  { href: '/portfolio', label: 'Projects' },
+  { href: '/portfolio#published-research', label: 'Research' },
+  { href: '/blog', label: 'Writing' },
   { href: '/about', label: 'About' },
-  { href: '/portfolio', label: 'Portfolio' },
-  { href: '/teaching', label: 'Teaching' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/philosophy', label: 'Philosophy' },
-  { href: '/media', label: 'Media' },
+  { href: '/resume', label: 'Resume' },
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -51,7 +50,7 @@ export function Navigation() {
               <Brain size={18} />
             </div>
             <span className="hidden sm:block bg-gradient-to-r from-primary-600 to-meditation-600 dark:from-primary-400 dark:to-meditation-400 bg-clip-text text-transparent">
-              Math with Meditation
+              Sanjay Chhetri
             </span>
           </Link>
 

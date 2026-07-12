@@ -4,7 +4,7 @@ import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
+  title: 'Projects',
   description: 'Data science portfolio: NLP, misinformation detection, machine learning, and interactive dashboards.',
 }
 
@@ -51,7 +51,7 @@ const projects = [
   },
   {
     id: 'published-research',
-    title: 'Published Research',
+    title: 'Published Behavioral Research',
     category: 'Behavioral Science',
     description: 'Published behavioral research exploring face masks, first impressions, race, and time-related social perception through quantitative analysis.',
     tags: ['Behavioral Science', 'Research Methods', 'Statistics', 'Publication'],
@@ -74,7 +74,7 @@ export default function PortfolioPage() {
             <div>
               <p className="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider">Portfolio</p>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-1">
-                Data Science Projects
+                Projects and Research
               </h1>
             </div>
           </div>

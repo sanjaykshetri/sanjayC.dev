@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Brain, BookOpen, BarChart3, Sparkles, Code, Tv } from 'lucide-react'
+import { ArrowRight, FileDown, FlaskConical, BarChart3, Sparkles, Code, Linkedin } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
@@ -7,35 +7,35 @@ import { Badge } from '@/components/ui/Badge'
 const highlights = [
   {
     icon: BarChart3,
-    title: 'Data Science Portfolio',
-    description: 'NLP research, misinformation detection, ML case studies, and embedded interactive dashboards.',
+    title: 'Projects',
+    description: 'Applied ML case studies spanning trust systems, NLP pipelines, recommenders, and analytics products.',
     href: '/portfolio',
     color: 'text-primary-500',
     bg: 'bg-primary-50 dark:bg-primary-950',
   },
   {
-    icon: BookOpen,
-    title: 'Teaching Resources',
-    description: 'Downloadable worksheets, lesson plans, PDFs, and interactive math visualizations.',
-    href: '/teaching',
-    color: 'text-green-500',
-    bg: 'bg-green-50 dark:bg-green-950',
-  },
-  {
-    icon: Brain,
-    title: 'Math with Meditation',
-    description: 'A contemplative approach to mathematical thinking — where rigor meets inner stillness.',
-    href: '/philosophy',
-    color: 'text-meditation-500',
-    bg: 'bg-meditation-50 dark:bg-meditation-950',
+    icon: FlaskConical,
+    title: 'Research',
+    description: 'Quantitative behavioral research and model evaluation work, with reproducible thinking and rigor.',
+    href: '/portfolio#published-research',
+    color: 'text-emerald-500',
+    bg: 'bg-emerald-50 dark:bg-emerald-950',
   },
   {
     icon: Sparkles,
-    title: 'Blog & Articles',
-    description: 'Reflections on mathematics, AI, learning science, and the intersection of data and wisdom.',
+    title: 'Writing',
+    description: 'Technical writing and reflections on AI systems, model trust, and decision intelligence.',
     href: '/blog',
     color: 'text-amber-500',
     bg: 'bg-amber-50 dark:bg-amber-950',
+  },
+  {
+    icon: FileDown,
+    title: 'Resume',
+    description: 'Download my resume for roles in data science, quantitative research, and machine learning.',
+    href: '/resume',
+    color: 'text-sky-500',
+    bg: 'bg-sky-50 dark:bg-sky-950',
   },
 ]
 
@@ -65,7 +65,7 @@ const featuredProjects = [
     href: '/portfolio#emotion-recommender',
   },
   {
-    title: 'Published Research',
+    title: 'Published Behavioral Research',
     description: 'Behavioral science work on face masks, first impressions, race, and time perception.',
     tags: ['Behavioral Science', 'Research', 'Experimental Design'],
     href: '/portfolio#published-research',
@@ -86,7 +86,7 @@ export default function HomePage() {
         <div className="relative section-container text-center py-24 pt-32">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full border border-gray-200 dark:border-gray-700 text-sm text-gray-600 dark:text-gray-400 mb-8 shadow-sm">
             <Sparkles size={14} className="text-meditation-500" />
-            Mathematics · Data Science · Contemplative Practice
+            Data Science · Machine Learning · Behavioral AI
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
@@ -97,35 +97,39 @@ export default function HomePage() {
           </h1>
 
           <p className="text-base md:text-lg font-semibold tracking-wide text-gray-600 dark:text-gray-300 mb-5 uppercase">
-            Data Scientist | Behavioral AI | Trust and Risk Analytics
+            Data Scientist | Machine Learning | Behavioral AI
           </p>
 
           <p className="text-xl md:text-2xl text-gray-500 dark:text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-            I build machine learning systems that combine mathematics, behavioral science,
-            NLP, and human-centered product thinking.
+            I build human-centered machine learning systems that turn complex data into trustworthy decisions.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-wrap gap-3 justify-center mb-16">
             <Link href="/portfolio" className="btn-primary text-base px-8 py-4">
-              View Portfolio
+              View Projects
               <ArrowRight size={18} />
             </Link>
-            <Link href="/about" className="btn-secondary text-base px-8 py-4">
-              Learn More
+            <Link href="/resume" className="btn-secondary text-base px-8 py-4">
+              <FileDown size={18} />
+              Download Resume
             </Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-6 text-sm text-gray-400 dark:text-gray-500">
-            <a href="https://github.com/sanjaykshetri" target="_blank" rel="noopener noreferrer" 
-              className="flex items-center gap-1.5 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
-              <Code size={16} />
+            <a
+              href="https://github.com/sanjaykshetri"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary text-base px-8 py-4"
+            >
+              <Code size={18} />
               GitHub
             </a>
-            <span className="w-px h-4 bg-gray-200 dark:bg-gray-700" />
-            <a href="https://youtube.com/@mathwithmeditation" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
-              <Tv size={16} />
-              YouTube
+            <a
+              href="https://www.linkedin.com/in/sanjaykshetri/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary text-base px-8 py-4"
+            >
+              <Linkedin size={18} />
+              LinkedIn
             </a>
           </div>
         </div>
@@ -136,8 +140,8 @@ export default function HomePage() {
         <div className="section-container">
           <SectionHeader
             label="Explore"
-            title="A Platform for Deep Learning"
-            description="Combining technical expertise with contemplative wisdom — for those who seek both analytical precision and holistic understanding."
+            title="Professional Focus Areas"
+            description="Technical depth and product execution across machine learning, quantitative research, and decision systems."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {highlights.map((item) => (
@@ -161,7 +165,7 @@ export default function HomePage() {
           <SectionHeader
             label="Featured Work"
             title="Selected Projects"
-            description="Highlights from the intersection of mathematics, machine learning, and education."
+            description="Highlights from applied machine learning, NLP, and behavioral science research."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredProjects.map((project) => (
@@ -188,20 +192,6 @@ export default function HomePage() {
               <ArrowRight size={16} />
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* Philosophy Teaser */}
-      <section className="section-padding bg-gradient-to-br from-primary-600 to-meditation-600 dark:from-primary-800 dark:to-meditation-800 text-white">
-        <div className="section-container text-center">
-          <p className="text-primary-200 text-sm font-semibold uppercase tracking-wider mb-4">The Core Philosophy</p>
-          <blockquote className="text-2xl md:text-4xl font-serif font-light italic max-w-4xl mx-auto leading-relaxed mb-8">
-            &ldquo;Mathematics is not just computation — it is a form of clear seeing. Meditation is not just relaxation — it is disciplined attention. Together, they cultivate the most powerful learning state.&rdquo;
-          </blockquote>
-          <Link href="/philosophy" className="inline-flex items-center gap-2 px-6 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-lg font-medium transition-colors">
-            Explore the Philosophy
-            <ArrowRight size={16} />
-          </Link>
         </div>
       </section>
     </div>

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Code, Tv, Mail, Brain } from 'lucide-react'
+import { Code, Linkedin, Mail, Brain } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -12,22 +12,23 @@ export function Footer() {
                 <Brain size={15} />
               </div>
               <span className="font-semibold bg-gradient-to-r from-primary-600 to-meditation-600 dark:from-primary-400 dark:to-meditation-400 bg-clip-text text-transparent">
-                Math with Meditation
+                Sanjay Chhetri
               </span>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-              Integrating mathematical rigor with contemplative depth. Education, data science, and inner clarity.
+              Data Scientist focused on machine learning, quantitative research, and behavioral AI.
             </p>
           </div>
           <div>
             <h3 className="font-semibold text-sm text-gray-900 dark:text-gray-100 mb-3">Navigation</h3>
             <ul className="space-y-2 text-sm text-gray-500 dark:text-gray-400">
               {[
+                { href: '/', label: 'Home' },
+                { href: '/portfolio', label: 'Projects' },
+                { href: '/portfolio#published-research', label: 'Research' },
+                { href: '/blog', label: 'Writing' },
                 { href: '/about', label: 'About' },
-                { href: '/portfolio', label: 'Portfolio' },
-                { href: '/teaching', label: 'Teaching' },
-                { href: '/blog', label: 'Blog' },
-                { href: '/philosophy', label: 'Philosophy' },
+                { href: '/resume', label: 'Resume' },
                 { href: '/contact', label: 'Contact' },
               ].map(link => (
                 <li key={link.href}>
@@ -46,10 +47,10 @@ export function Footer() {
                 <Code size={16} />
                 GitHub
               </a>
-              <a href="https://youtube.com/@mathwithmeditation" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/in/sanjaykshetri/" target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                <Tv size={16} />
-                YouTube
+                <Linkedin size={16} />
+                LinkedIn
               </a>
               <Link href="/contact" 
                 className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
@@ -60,7 +61,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-200 dark:border-gray-800 mt-8 pt-6 text-center text-xs text-gray-400 dark:text-gray-600">
-          © {new Date().getFullYear()} Math with Meditation. All rights reserved.
+          © {new Date().getFullYear()} Sanjay Chhetri. All rights reserved.
         </div>
       </div>
     </footer>
