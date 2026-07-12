@@ -5,16 +5,16 @@ import { ContactForm } from '@/components/sections/ContactForm'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Get in touch with Math with Meditation for collaborations, questions, or just to connect.',
+  description: 'Contact Sanjay Chhetri for collaborations, opportunities, or project discussions in data science and machine learning.',
 }
 
 const contactMethods = [
   {
     icon: Mail,
     title: 'Email',
-    description: 'For research collaborations, speaking inquiries, or general questions.',
-    value: 'hello@mathwithmeditation.com',
-    href: 'mailto:hello@mathwithmeditation.com',
+    description: 'For research collaborations, hiring conversations, and project inquiries.',
+    value: 'sanjaykshetri@gmail.com',
+    href: 'mailto:sanjaykshetri@gmail.com',
     color: 'text-primary-500',
     bg: 'bg-primary-50 dark:bg-primary-950',
   },
@@ -29,12 +29,12 @@ const contactMethods = [
   },
   {
     icon: Tv,
-    title: 'YouTube',
-    description: 'Subscribe for videos on mathematics, AI, and contemplative learning.',
-    value: '@mathwithmeditation',
-    href: 'https://youtube.com/@mathwithmeditation',
-    color: 'text-red-500',
-    bg: 'bg-red-50 dark:bg-red-950',
+    title: 'LinkedIn',
+    description: 'Connect for professional updates and data science opportunities.',
+    value: 'linkedin.com/in/sanjaykshetri',
+    href: 'https://www.linkedin.com/in/sanjaykshetri/',
+    color: 'text-blue-600 dark:text-blue-400',
+    bg: 'bg-blue-50 dark:bg-blue-950',
   },
 ]
 
@@ -56,7 +56,7 @@ export default function ContactPage() {
             </div>
           </div>
           <p className="text-xl text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed">
-            I welcome conversations about research collaborations, teaching partnerships, speaking engagements, or simply connecting with others interested in mathematics and contemplative practice.
+            I welcome conversations about data science roles, machine learning projects, research collaborations, and applied analytics work.
           </p>
         </div>
       </section>

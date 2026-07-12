@@ -16,7 +16,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-              Data Scientist focused on machine learning, quantitative research, and behavioral AI.
+              Data Scientist working across machine learning, behavioral science, NLP, and trustworthy AI.
             </p>
           </div>
           <div>

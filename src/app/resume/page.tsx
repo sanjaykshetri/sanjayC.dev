@@ -51,7 +51,7 @@ export default function ResumePage() {
           </div>
 
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            Replace the bundled resume file in public/Sanjay_Chhetri_Resume.pdf with your latest version whenever you update your experience.
+            The latest resume is available as a downloadable PDF.
           </p>
         </div>
       </section>

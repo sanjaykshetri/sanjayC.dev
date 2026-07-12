@@ -6,11 +6,11 @@ import { Footer } from '@/components/layout/Footer'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Sanjay Chhetri',
+    default: 'Sanjay Chhetri | Data Scientist',
     template: '%s | Sanjay Chhetri',
   },
-  description: 'Data scientist portfolio focused on machine learning, quantitative research, and behavioral AI.',
-  keywords: ['data science', 'machine learning', 'behavioral AI', 'NLP', 'quantitative research', 'trust analytics'],
+  description: 'Data science portfolio featuring machine learning, behavioral research, NLP, trustworthy AI, and applied analytics projects.',
+  keywords: ['data science', 'machine learning', 'behavioral AI', 'NLP', 'trustworthy AI', 'applied analytics'],
   authors: [{ name: 'Sanjay Chhetri' }],
   openGraph: {
     type: 'website',

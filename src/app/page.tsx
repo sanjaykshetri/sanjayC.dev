@@ -86,7 +86,7 @@ export default function HomePage() {
         <div className="relative section-container text-center py-24 pt-32">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full border border-gray-200 dark:border-gray-700 text-sm text-gray-600 dark:text-gray-400 mb-8 shadow-sm">
             <Sparkles size={14} className="text-meditation-500" />
-            Data Science · Machine Learning · Behavioral AI
+            Machine Learning · Behavioral AI · NLP · Trustworthy AI
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
