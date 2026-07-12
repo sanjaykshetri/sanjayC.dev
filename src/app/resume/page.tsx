@@ -23,7 +23,7 @@ export default function ResumePage() {
 
           <div className="flex flex-wrap gap-3 mb-8">
             <a
-              href="/Sanjay_Chhetri_Resume.pdf"
+              href="/Sanjay_Chhetri_Resume_07-04-26.pdf"
               download
               className="btn-primary"
             >
@@ -40,7 +40,7 @@ export default function ResumePage() {
               GitHub
             </a>
             <a
-              href="https://www.linkedin.com/in/sanjaykshetri/"
+              href="https://www.linkedin.com/in/sanjaychhetri/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary"

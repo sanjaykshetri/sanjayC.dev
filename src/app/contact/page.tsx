@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { Mail, Code, Tv, MessageSquare } from 'lucide-react'
+import { Mail, Code, Tv, MessageSquare, MapPin, Briefcase } from 'lucide-react'
 import { Card } from '@/components/ui/Card'
 import { ContactForm } from '@/components/sections/ContactForm'
 
@@ -31,10 +31,19 @@ const contactMethods = [
     icon: Tv,
     title: 'LinkedIn',
     description: 'Connect for professional updates and data science opportunities.',
-    value: 'linkedin.com/in/sanjaykshetri',
-    href: 'https://www.linkedin.com/in/sanjaykshetri/',
+    value: 'linkedin.com/in/sanjaychhetri',
+    href: 'https://www.linkedin.com/in/sanjaychhetri/',
     color: 'text-blue-600 dark:text-blue-400',
     bg: 'bg-blue-50 dark:bg-blue-950',
+  },
+  {
+    icon: MapPin,
+    title: 'Location',
+    description: 'Open to conversations with teams across the U.S.',
+    value: 'Greater Baltimore Area',
+    href: 'https://maps.google.com/?q=Greater+Baltimore+Area',
+    color: 'text-amber-600 dark:text-amber-400',
+    bg: 'bg-amber-50 dark:bg-amber-950',
   },
 ]
 
@@ -51,12 +60,12 @@ export default function ContactPage() {
             <div>
               <p className="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider">Contact</p>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mt-1">
-                Get in Touch
+                Let&apos;s Connect
               </h1>
             </div>
           </div>
           <p className="text-xl text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed">
-            I welcome conversations about data science roles, machine learning projects, research collaborations, and applied analytics work.
+            Whether you&apos;re interested in machine learning, AI, behavioral research, analytics, or potential collaboration, I&apos;d be happy to connect.
           </p>
         </div>
       </section>
@@ -78,6 +87,20 @@ export default function ContactPage() {
               </a>
             ))}
           </div>
+
+          <Card className="p-6 max-w-4xl mx-auto mt-8">
+            <div className="flex items-start gap-3">
+              <div className="w-10 h-10 bg-primary-50 dark:bg-primary-950 rounded-lg flex items-center justify-center">
+                <Briefcase size={18} className="text-primary-600 dark:text-primary-400" />
+              </div>
+              <div>
+                <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">Currently seeking opportunities</h2>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  I&apos;m interested in Data Scientist, Machine Learning Engineer, Applied AI, and Research Scientist roles where I can build machine learning systems and data-driven products that solve meaningful real-world problems.
+                </p>
+              </div>
+            </div>
+          </Card>
 
           {/* Contact Form */}
           <div className="max-w-2xl mx-auto mt-12">

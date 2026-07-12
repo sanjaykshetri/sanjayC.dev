@@ -123,7 +123,7 @@ export default function HomePage() {
               GitHub
             </a>
             <a
-              href="https://www.linkedin.com/in/sanjaykshetri/"
+              href="https://www.linkedin.com/in/sanjaychhetri/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary text-base px-8 py-4"

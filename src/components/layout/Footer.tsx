@@ -47,7 +47,7 @@ export function Footer() {
                 <Code size={16} />
                 GitHub
               </a>
-              <a href="https://www.linkedin.com/in/sanjaykshetri/" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/in/sanjaychhetri/" target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                 <LinkIcon size={16} />
                 LinkedIn
