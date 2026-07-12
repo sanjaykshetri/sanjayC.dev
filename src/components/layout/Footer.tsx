@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Code, Linkedin, Mail, Brain } from 'lucide-react'
+import { Code, LinkIcon, Mail, Brain } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -49,7 +49,7 @@ export function Footer() {
               </a>
               <a href="https://www.linkedin.com/in/sanjaykshetri/" target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                <Linkedin size={16} />
+                <LinkIcon size={16} />
                 LinkedIn
               </a>
               <Link href="/contact" 

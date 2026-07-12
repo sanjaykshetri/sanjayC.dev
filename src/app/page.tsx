@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, FileDown, FlaskConical, BarChart3, Sparkles, Code, Linkedin } from 'lucide-react'
+import { ArrowRight, FileDown, FlaskConical, BarChart3, Sparkles, Code, LinkIcon } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
@@ -128,7 +128,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="btn-secondary text-base px-8 py-4"
             >
-              <Linkedin size={18} />
+              <LinkIcon size={18} />
               LinkedIn
             </a>
           </div>

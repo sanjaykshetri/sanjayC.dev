@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { FileDown, Code, Linkedin } from 'lucide-react'
+import { FileDown, Code, LinkIcon } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Resume',
@@ -45,7 +45,7 @@ export default function ResumePage() {
               rel="noopener noreferrer"
               className="btn-secondary"
             >
-              <Linkedin size={16} />
+              <LinkIcon size={16} />
               LinkedIn
             </a>
           </div>
