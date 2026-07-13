@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import { Brain, Database, Rocket, Microscope } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Badge } from '@/components/ui/Badge'
@@ -102,6 +103,24 @@ export default function AboutPage() {
                 <li><span className="font-semibold">Publications:</span> 1 peer-reviewed journal article</li>
                 <li><span className="font-semibold">Flagship Projects:</span> 4 featured projects</li>
               </ul>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Venn */}
+      <section className="pb-12 bg-white dark:bg-gray-950">
+        <div className="section-container">
+          <div className="max-w-4xl mx-auto">
+            <Card className="overflow-hidden border-primary-100 dark:border-primary-900">
+              <Image
+                src="/professional_venn.png"
+                alt="Professional Venn diagram showing interdisciplinary strengths"
+                width={1600}
+                height={900}
+                className="w-full h-auto"
+                priority
+              />
             </Card>
           </div>
         </div>
