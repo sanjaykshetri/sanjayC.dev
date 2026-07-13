@@ -1,46 +1,63 @@
 import { Metadata } from 'next'
-import { GraduationCap, Code, BookOpen, Heart } from 'lucide-react'
+import { Brain, Database, Rocket, Microscope } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Badge } from '@/components/ui/Badge'
 import { Card } from '@/components/ui/Card'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Learn about Sanjay Kshetri — data scientist, mathematics educator, and contemplative practitioner.',
+  description: 'Learn about Sanjay Chhetri, a data scientist whose work bridges machine learning, behavioral science, and applied research.',
 }
 
-const skills = {
-  'Data Science & ML': ['Python', 'PyTorch', 'TensorFlow', 'Scikit-learn', 'NLP', 'Transformers', 'Graph Neural Networks'],
-  'Mathematics': ['Statistics', 'Linear Algebra', 'Calculus', 'Probability Theory', 'Mathematical Modeling'],
-  'Teaching': ['Curriculum Design', 'Active Learning', 'Math Visualization', 'Educational Technology'],
-  'Tools': ['React', 'Next.js', 'TypeScript', 'SQL', 'R', 'Tableau', 'Git'],
+const expertise = {
+  'Machine Learning & AI': ['Supervised Learning', 'NLP', 'Transformer Models', 'Recommendation Systems', 'Feature Engineering', 'Model Evaluation'],
+  'Data Science': ['Python', 'SQL', 'R', 'Statistical Modeling', 'Experimental Design', 'Data Visualization'],
+  'Software & Deployment': ['Streamlit', 'Next.js', 'React', 'Git', 'GitHub', 'Vercel', 'Docker'],
+  'Research': ['Behavioral Science', 'Cognitive Science', 'Quantitative Methods', 'Experimental Psychology', 'Scientific Communication'],
 }
 
 const timeline = [
   {
-    year: '2024',
-    title: 'Research in Misinformation Detection',
-    description: 'Leading NLP research on fake news detection using large language models.',
-    icon: Code,
+    title: 'Research Assistant',
+    subtitle: 'Montclair State University',
+    description: 'Conducted behavioral and cognitive research using experimental methods and quantitative analysis.',
+    icon: Microscope,
   },
   {
-    year: '2022',
-    title: 'Mathematics Educator',
-    description: 'Began teaching mathematics with an emphasis on conceptual understanding and student wellbeing.',
-    icon: GraduationCap,
+    title: 'Published Research',
+    subtitle: 'Journal of Nonverbal Behavior',
+    description: 'Published peer-reviewed work on face masks, first impressions, and social perception.',
+    icon: Brain,
   },
   {
-    year: '2020',
-    title: 'Started Contemplative Practice',
-    description: 'Integrated meditation and mindfulness into daily learning and teaching routines.',
-    icon: Heart,
+    title: 'Springboard Data Science Fellowship',
+    subtitle: 'Machine Learning and Analytics Training',
+    description: 'Advanced applied ML, statistics, and end-to-end project development across real-world datasets.',
+    icon: Database,
   },
   {
-    year: '2018',
-    title: 'Data Science Journey Begins',
-    description: 'Began exploring machine learning, statistics, and their applications in education.',
-    icon: BookOpen,
+    title: 'Machine Learning Portfolio',
+    subtitle: 'NLP, Recommenders, Education Analytics',
+    description: 'Built deployable projects spanning misinformation detection, recommender systems, and analytics dashboards.',
+    icon: Rocket,
   },
+  {
+    title: 'TrustShield',
+    subtitle: 'Trust and Risk Intelligence Platform',
+    description: 'Designing a unified product direction for trustworthy AI across fraud, misinformation, and decision support workflows.',
+    icon: Rocket,
+  },
+]
+
+const researchInterests = [
+  'Human-centered AI',
+  'Trustworthy AI',
+  'Misinformation Detection',
+  'Behavioral Analytics',
+  'Recommendation Systems',
+  'Educational Data Science',
+  'Fraud Detection',
+  'Explainable Machine Learning',
 ]
 
 export default function AboutPage() {
@@ -52,31 +69,53 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto">
             <p className="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider mb-3">About</p>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Sanjay Kshetri
+              Sanjay Chhetri
             </h1>
             <p className="text-xl text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
-              Data Scientist · Mathematics Educator · Contemplative Practitioner
+              Data Scientist | Cognitive & Behavioral Scientist
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
-              I work at the intersection of mathematics, artificial intelligence, and contemplative practice. 
-              My research focuses on NLP and misinformation detection, while my teaching philosophy integrates 
-              mindfulness to cultivate deeper mathematical understanding. I believe that the clarity of mind 
-              cultivated through meditation is the same clarity needed to truly understand mathematics.
+              My work sits at the intersection of machine learning, behavioral science, and applied research. Drawing on a background in cognitive science, behavioral research, and quantitative methods, I build human-centered AI and machine learning systems that help people make better decisions from complex data.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Skills */}
+      {/* Story */}
+      <section className="section-padding bg-white dark:bg-gray-950">
+        <div className="section-container">
+          <SectionHeader
+            label="Narrative"
+            title="My Story"
+            description="A professional trajectory shaped by research, data science, and human-centered problem solving."
+          />
+          <div className="max-w-4xl mx-auto space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>
+              My career has been shaped by a single question: how do people think, learn, and make decisions?
+            </p>
+            <p>
+              That question first led me to mathematics, where I spent years helping students develop analytical reasoning and problem-solving skills. It later drew me into psychology and cognitive science, where I studied human judgment, misinformation, and behavioral decision-making through experimental research and advanced quantitative methods.
+            </p>
+            <p>
+              Today, I bring these experiences together as a data scientist. My work combines machine learning, natural language processing, statistical modeling, and software engineering to build intelligent systems that solve real-world problems. I am particularly interested in applications where human behavior and artificial intelligence intersect, such as misinformation detection, recommendation systems, educational analytics, fraud detection, and trustworthy AI.
+            </p>
+            <p>
+              I enjoy building complete, end-to-end data products that move from research questions and raw data to deployed applications. Whether developing predictive models, designing interactive dashboards, or publishing research, my goal is to create systems that are technically rigorous, interpretable, and useful to the people who rely on them.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Expertise */}
       <section className="section-padding bg-white dark:bg-gray-950">
         <div className="section-container">
           <SectionHeader
             label="Expertise"
-            title="Skills & Knowledge"
-            description="A blend of technical depth and pedagogical breadth."
+            title="Areas of Expertise"
+            description="Organized capabilities across machine learning, data science, software delivery, and research."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {Object.entries(skills).map(([category, items]) => (
+            {Object.entries(expertise).map(([category, items]) => (
               <Card key={category} className="p-6">
                 <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">{category}</h3>
                 <div className="flex flex-wrap gap-2">
@@ -90,13 +129,47 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Research Interests */}
+      <section className="section-padding bg-gray-50 dark:bg-gray-900">
+        <div className="section-container">
+          <SectionHeader
+            label="Focus"
+            title="Research Interests"
+            description="Problem areas where I am most motivated to build, study, and deploy data-driven systems."
+          />
+          <div className="max-w-4xl mx-auto flex flex-wrap gap-2">
+            {researchInterests.map((interest) => (
+              <Badge key={interest} variant="primary">{interest}</Badge>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Philosophy */}
+      <section className="section-padding bg-white dark:bg-gray-950">
+        <div className="section-container">
+          <SectionHeader
+            label="Approach"
+            title="Professional Philosophy"
+            description="How I think about impact, modeling, and decision support in data science."
+          />
+          <div className="max-w-4xl mx-auto">
+            <Card className="p-7 border-primary-100 dark:border-primary-900 bg-gradient-to-br from-primary-50/60 to-white dark:from-gray-900 dark:to-gray-950">
+              <p className="text-lg text-gray-700 dark:text-gray-200 leading-relaxed">
+                I believe the most impactful data science combines technical excellence with a deep understanding of human behavior. Models do not make decisions; people do. For that reason, I am especially interested in developing AI systems that are interpretable, trustworthy, and designed to support better human judgment rather than replace it.
+              </p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Timeline */}
       <section className="section-padding bg-gray-50 dark:bg-gray-900">
         <div className="section-container">
           <SectionHeader
             label="Journey"
-            title="My Path"
-            description="A timeline of learning, teaching, and discovery."
+            title="Career Trajectory"
+            description="A progression from behavioral research to end-to-end machine learning product development."
           />
           <div className="max-w-2xl mx-auto">
             {timeline.map((item, index) => (
@@ -110,8 +183,8 @@ export default function AboutPage() {
                   )}
                 </div>
                 <div className="pb-8 last:pb-0">
-                  <span className="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider">{item.year}</span>
                   <h3 className="font-semibold text-gray-900 dark:text-gray-100 mt-1 mb-1">{item.title}</h3>
+                  <p className="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider mb-1">{item.subtitle}</p>
                   <p className="text-sm text-gray-500 dark:text-gray-400">{item.description}</p>
                 </div>
               </div>
