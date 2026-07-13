@@ -60,6 +60,14 @@ const researchInterests = [
   'Explainable Machine Learning',
 ]
 
+const education = [
+  'M.S. in Psychological Sciences - Montclair State University',
+  'Graduate Certificate in Advanced Quantitative Methods - Montclair State University',
+  'Springboard Data Science Career Track',
+  'B.A. in Psychology - Ramapo College of New Jersey',
+  'B.A. in Mathematics & English Literature - Tribhuvan University',
+]
+
 export default function AboutPage() {
   return (
     <div className="pt-16">
@@ -76,6 +84,67 @@ export default function AboutPage() {
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
               My work sits at the intersection of machine learning, behavioral science, and applied research. Drawing on a background in cognitive science, behavioral research, and quantitative methods, I build human-centered AI and machine learning systems that help people make better decisions from complex data.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Facts */}
+      <section className="pb-8 bg-white dark:bg-gray-950">
+        <div className="section-container">
+          <div className="max-w-4xl mx-auto">
+            <Card className="p-6 border-primary-100 dark:border-primary-900 bg-gradient-to-r from-primary-50/70 to-white dark:from-gray-900 dark:to-gray-900">
+              <p className="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider mb-4">Quick Facts</p>
+              <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-200">
+                <li><span className="font-semibold">Location:</span> Greater Baltimore, Maryland</li>
+                <li><span className="font-semibold">Open to:</span> Data Scientist, Applied AI, Machine Learning, Research Scientist roles</li>
+                <li><span className="font-semibold">Specialties:</span> NLP, Behavioral AI, Trustworthy AI, Recommendation Systems</li>
+                <li><span className="font-semibold">Publications:</span> 1 peer-reviewed journal article</li>
+                <li><span className="font-semibold">Flagship Projects:</span> 4 featured projects</li>
+              </ul>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Educational Foundation */}
+      <section className="section-padding bg-gray-50 dark:bg-gray-900">
+        <div className="section-container">
+          <SectionHeader
+            label="Background"
+            title="Educational Foundation"
+            description="My interdisciplinary training across mathematics, psychology, and quantitative research."
+          />
+          <div className="max-w-4xl mx-auto space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>
+              My academic journey has been intentionally interdisciplinary, bringing together mathematics, psychology, and quantitative research. This combination shapes how I approach machine learning, not only from the perspective of algorithms and data, but also through an understanding of how people think, learn, and make decisions.
+            </p>
+            <div>
+              <p className="text-sm font-semibold text-gray-900 dark:text-gray-100 uppercase tracking-wider mb-3">Education</p>
+              <ul className="space-y-2">
+                {education.map((item) => (
+                  <li key={item} className="text-gray-600 dark:text-gray-300">{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Current Focus */}
+      <section className="section-padding bg-white dark:bg-gray-950">
+        <div className="section-container">
+          <SectionHeader
+            label="Now"
+            title="Current Focus"
+            description="The practical problems and system-level work I am focused on right now."
+          />
+          <div className="max-w-4xl mx-auto space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>
+              I am currently focused on building intelligent systems that combine machine learning with behavioral science to solve real-world problems involving trust, misinformation, recommendation systems, educational analytics, and fraud detection.
+            </p>
+            <p>
+              My work emphasizes end-to-end development, from data collection and statistical analysis to model development, deployment, visualization, and technical communication. I enjoy transforming research ideas into practical software products that are technically rigorous, interpretable, and useful to decision makers.
             </p>
           </div>
         </div>
@@ -159,6 +228,60 @@ export default function AboutPage() {
                 I believe the most impactful data science combines technical excellence with a deep understanding of human behavior. Models do not make decisions; people do. For that reason, I am especially interested in developing AI systems that are interpretable, trustworthy, and designed to support better human judgment rather than replace it.
               </p>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Selected Publications */}
+      <section className="section-padding bg-gray-50 dark:bg-gray-900">
+        <div className="section-container">
+          <SectionHeader
+            label="Publications"
+            title="Selected Publications"
+            description="Peer-reviewed and technical writing outputs connected to this portfolio."
+          />
+          <div className="max-w-4xl mx-auto space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>
+              Bjornsdottir, R.T., Wilson, J.P., & Chhetri, S. (2026). The Effect of Medical Face Masks on First Impressions Across Race and Time: Testing Social and Perceptual Explanations. Journal of Nonverbal Behavior.
+            </p>
+            <p>
+              Additional technical writing, project documentation, and research reports are available throughout this portfolio.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Beyond Data Science */}
+      <section className="section-padding bg-white dark:bg-gray-950">
+        <div className="section-container">
+          <SectionHeader
+            label="Outside Work"
+            title="Beyond Data Science"
+            description="Interests that strengthen the habits and mindset behind my technical work."
+          />
+          <div className="max-w-4xl mx-auto text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>
+              Outside of my professional work, I enjoy studying philosophy, Sanskrit, and the history of ideas, maintaining a regular contemplative practice, and spending time with my family. These pursuits reinforce qualities that I value in my work as well: curiosity, disciplined learning, patience, and thoughtful problem solving.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Looking Ahead */}
+      <section className="section-padding bg-gray-50 dark:bg-gray-900">
+        <div className="section-container">
+          <SectionHeader
+            label="Future"
+            title="Looking Ahead"
+            description="Where I aim to contribute as AI transforms decision-making and human learning."
+          />
+          <div className="max-w-4xl mx-auto space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p>
+              Artificial intelligence is reshaping how people learn, work, and make decisions. My goal is to contribute to that transformation by developing AI systems that are technically robust, scientifically grounded, and designed to augment human judgment rather than replace it.
+            </p>
+            <p>
+              I am particularly interested in opportunities where machine learning, behavioral science, and software engineering come together to create products that have meaningful real-world impact.
+            </p>
           </div>
         </div>
       </section>
