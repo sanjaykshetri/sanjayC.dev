@@ -1,65 +1,78 @@
 import { Metadata } from 'next'
-import { Code, BarChart3 } from 'lucide-react'
+import { BarChart3 } from 'lucide-react'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Data science portfolio: NLP, misinformation detection, machine learning, and interactive dashboards.',
+  description: 'Selected end-to-end projects in machine learning, NLP, recommender systems, educational analytics, and behavioral research.',
 }
 
-const projects = [
-  {
-    id: 'trustshield',
-    title: 'TrustShield',
-    category: 'Trust and Risk Analytics',
-    description: 'An AI platform that unifies fraud detection, review integrity scoring, and misinformation analysis into a shared risk workflow with model explainability and monitoring.',
-    tags: ['Machine Learning', 'Risk Analytics', 'Explainable AI', 'Monitoring'],
-    github: 'https://github.com/sanjaykshetri',
-    status: 'Production Ready',
-    highlights: ['Unified risk contract design', 'End-to-end fraud module', 'Dashboard and monitoring'],
-  },
+type ProjectAction = {
+  label: string
+  href?: string
+}
+
+type Project = {
+  id: string
+  title: string
+  oneLine: string
+  featured?: boolean
+  technologies: string[]
+  artifacts: string[]
+  actions: ProjectAction[]
+}
+
+const selectedProjects: Project[] = [
   {
     id: 'tentacles',
     title: 'Tentacles of Misinformation',
-    category: 'NLP and Misinformation',
-    description: 'A machine learning and NLP pipeline for identifying misinformation patterns across content and sources, designed with interpretable outputs for analysts.',
-    tags: ['NLP', 'Misinformation Detection', 'Classification', 'Interpretability'],
-    github: 'https://github.com/sanjaykshetri',
-    status: 'Research to Product',
-    highlights: ['Text and source signals', 'Model explainability', 'Trust and safety focus'],
+    featured: true,
+    oneLine: 'An end-to-end NLP and behavioral analytics platform for detecting misinformation using linguistic features, machine learning, and cognitive science.',
+    technologies: ['Python', 'NLP', 'Scikit-learn', 'Hugging Face', 'Streamlit', 'Quarto', 'Machine Learning'],
+    artifacts: ['Interactive Quarto Book', "Master's Thesis", 'Hugging Face / Streamlit Demo', 'GitHub Repository'],
+    actions: [
+      { label: 'Quarto Book', href: 'https://sanjaykshetri.github.io/tentacles-of-misinformation/' },
+      { label: 'GitHub', href: 'https://github.com/sanjaykshetri' },
+    ],
   },
   {
     id: 'teacher-assistant',
     title: 'Teacher Assistant Dashboard',
-    category: 'Education Analytics',
-    description: 'An analytics dashboard that surfaces learner performance trends and early-risk indicators to support faster instructional intervention and better outcomes.',
-    tags: ['Analytics', 'Dashboards', 'Early Risk Detection', 'Education'],
-    github: 'https://github.com/sanjaykshetri',
-    status: 'Deployed',
-    highlights: ['At-risk student insights', 'Actionable instructor views', 'Data-informed intervention'],
+    oneLine: 'An AI-assisted educational analytics platform that integrates student performance, assessments, and interventions into actionable classroom insights.',
+    technologies: ['Python', 'SQL', 'Streamlit', 'Pandas', 'Data Visualization'],
+    artifacts: ['Interactive Dashboard', 'Jupyter Notebook', 'GitHub Repository'],
+    actions: [
+      { label: 'GitHub', href: 'https://github.com/sanjaykshetri' },
+    ],
   },
   {
     id: 'emotion-recommender',
     title: 'Emotion-Based Book Recommender',
-    category: 'NLP Recommender Systems',
-    description: 'A semantic-embedding recommendation engine that maps user emotion and intent to personalized reading suggestions.',
-    tags: ['NLP', 'Semantic Embeddings', 'Recommendation Systems', 'Personalization'],
-    github: 'https://github.com/sanjaykshetri',
-    status: 'Prototype',
-    highlights: ['Emotion-aware ranking', 'Embedding similarity search', 'Human-centered recommendations'],
+    oneLine: 'A semantic recommendation system that matches readers with books using transformer embeddings and natural language understanding.',
+    technologies: ['Python', 'SBERT', 'Sentence Transformers', 'Streamlit', 'Recommendation Systems'],
+    artifacts: ['Live Streamlit App', 'Jupyter Notebook', 'GitHub Repository'],
+    actions: [
+      { label: 'GitHub', href: 'https://github.com/sanjaykshetri' },
+    ],
   },
   {
     id: 'published-research',
-    title: 'Published Behavioral Research',
-    category: 'Behavioral Science',
-    description: 'Published behavioral research exploring face masks, first impressions, race, and time-related social perception through quantitative analysis.',
-    tags: ['Behavioral Science', 'Research Methods', 'Statistics', 'Publication'],
-    github: 'https://github.com/sanjaykshetri',
-    status: 'Published',
-    highlights: ['Peer-reviewed output', 'Experimental design rigor', 'Cross-domain relevance to AI ethics'],
+    title: 'Face Mask Research',
+    oneLine: 'Peer-reviewed behavioral science research investigating how medical face masks influence first impressions across race and time.',
+    technologies: ['R', 'Statistical Modeling', 'Experimental Design', 'Behavioral Science'],
+    artifacts: ['Published Journal Paper', 'PDF', 'GitHub Repository (analysis/code, if available)'],
+    actions: [
+      { label: 'GitHub', href: 'https://github.com/sanjaykshetri' },
+    ],
   },
 ]
+
+const trustShieldNote = {
+  id: 'trustshield',
+  title: 'TrustShield',
+  description: 'TrustShield is an evolving platform initiative; selected projects below represent major bodies of work that inform its architecture and research direction.',
+}
 
 export default function PortfolioPage() {
   return (
@@ -84,63 +97,89 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* Projects Grid */}
+      <section className="pb-4 bg-white dark:bg-gray-950">
+        <div className="section-container">
+          <Card id={trustShieldNote.id} className="p-6 bg-gradient-to-r from-gray-50 to-white dark:from-gray-900 dark:to-gray-900">
+            <p className="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider mb-2">Platform Direction</p>
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-2">{trustShieldNote.title}</h2>
+            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{trustShieldNote.description}</p>
+          </Card>
+        </div>
+      </section>
+
+      {/* Selected Projects */}
       <section className="section-padding bg-white dark:bg-gray-950">
         <div className="section-container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {projects.map((project) => (
-              <Card key={project.id} className="p-6 flex flex-col" id={project.id}>
-                <div className="flex items-start justify-between mb-3">
-                  <div>
-                    <span className="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider">
-                      {project.category}
-                    </span>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mt-1">
-                      {project.title}
-                    </h3>
-                  </div>
-                  <Badge variant={
-                    project.status === 'Active Research' ? 'primary' :
-                    project.status === 'Published' ? 'success' :
-                    project.status === 'Deployed' || project.status === 'Production' ? 'success' :
-                    'default'
-                  }>
-                    {project.status}
-                  </Badge>
-                </div>
-
-                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4 flex-1">
-                  {project.description}
-                </p>
-
-                <div className="mb-4">
-                  <p className="text-xs font-medium text-gray-700 dark:text-gray-300 mb-2">Highlights:</p>
-                  <ul className="space-y-1">
-                    {project.highlights.map((h) => (
-                      <li key={h} className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1.5">
-                        <span className="w-1 h-1 bg-primary-500 rounded-full flex-shrink-0" />
-                        {h}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <Badge key={tag} variant="default">{tag}</Badge>
-                  ))}
-                </div>
-
-                <div className="flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-800">
-                  <a href={project.github} target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
-                    <Code size={15} />
-                    View Code
-                  </a>
-                </div>
-              </Card>
-            ))}
+          <div className="mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-3">Selected Projects</h2>
+            <p className="text-gray-600 dark:text-gray-300 italic max-w-4xl">
+              A selection of end-to-end projects spanning machine learning, natural language processing, recommender systems, educational analytics, and behavioral research.
+            </p>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {selectedProjects.map((project, index) => {
+              const availableActions = project.actions.filter((action) => Boolean(action.href))
+
+              return (
+                <Card
+                  key={project.id}
+                  id={project.id}
+                  className={`${project.featured ? 'md:col-span-2 p-8 lg:p-10 border-primary-200 dark:border-primary-900 bg-gradient-to-br from-primary-50/80 via-white to-white dark:from-gray-900 dark:via-gray-900 dark:to-gray-950' : 'p-6'} flex flex-col`}
+                >
+                  <div className="flex items-start justify-between gap-3 mb-4">
+                    <h3 className={`${project.featured ? 'text-2xl md:text-3xl' : 'text-xl'} font-semibold text-gray-900 dark:text-gray-100`}>
+                      {index + 1}. {project.title}
+                    </h3>
+                    {project.featured && <Badge variant="primary">Flagship Project</Badge>}
+                  </div>
+
+                  <p className="text-gray-600 dark:text-gray-300 border-l-4 border-primary-300 dark:border-primary-700 pl-4 mb-5 leading-relaxed">
+                    {project.oneLine}
+                  </p>
+
+                  <div className="mb-4">
+                    <p className="text-xs font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider mb-2">Technologies</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech) => (
+                        <Badge key={tech} variant="default">{tech}</Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mb-5">
+                    <p className="text-xs font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider mb-2">Artifacts</p>
+                    <ul className="space-y-1.5">
+                      {project.artifacts.map((artifact) => (
+                        <li key={artifact} className="text-sm text-gray-600 dark:text-gray-300">{artifact}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-100 dark:border-gray-800">
+                    {availableActions.map((action) => (
+                      <a
+                        key={action.label}
+                        href={action.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                      >
+                        {action.label}
+                      </a>
+                    ))}
+                    {availableActions.length === 0 && (
+                      <span className="text-sm text-gray-500 dark:text-gray-400">Artifact links coming soon.</span>
+                    )}
+                  </div>
+                </Card>
+              )
+            })}
+          </div>
+
+          <p className="mt-8 text-sm text-gray-500 dark:text-gray-400">
+            Each project follows a consistent structure: one-sentence overview, technology badges, and action buttons that only appear when a public artifact link is available.
+          </p>
         </div>
       </section>
     </div>
