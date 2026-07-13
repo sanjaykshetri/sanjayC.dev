@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, FileDown, FlaskConical, BarChart3, Sparkles, Code, LinkIcon } from 'lucide-react'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Card } from '@/components/ui/Card'
@@ -89,6 +90,17 @@ export default function HomePage() {
             Machine Learning · Behavioral AI · NLP · Trustworthy AI
           </div>
 
+          <div className="relative mx-auto mb-8 h-44 w-44 overflow-hidden rounded-full border-4 border-white/80 shadow-2xl ring-1 ring-gray-200 dark:border-gray-800 dark:ring-gray-700 md:h-56 md:w-56">
+            <Image
+              src="/headshot.png"
+              alt="Portrait of Sanjay Chhetri"
+              fill
+              priority
+              className="object-cover"
+              sizes="(min-width: 768px) 224px, 176px"
+            />
+          </div>
+
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
             Sanjay{' '}
             <span className="bg-gradient-to-r from-primary-600 via-primary-500 to-meditation-600 dark:from-primary-400 dark:via-primary-300 dark:to-meditation-400 bg-clip-text text-transparent">
@@ -109,9 +121,9 @@ export default function HomePage() {
               View Projects
               <ArrowRight size={18} />
             </Link>
-            <Link href="/resume" className="btn-secondary text-base px-8 py-4">
+            <Link href="/resume" target="_blank" rel="noopener noreferrer" className="btn-secondary text-base px-8 py-4">
               <FileDown size={18} />
-              Download Resume
+              View Resume
             </Link>
             <a
               href="https://github.com/sanjaykshetri"
