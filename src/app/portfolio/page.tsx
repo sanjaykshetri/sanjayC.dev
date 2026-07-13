@@ -33,7 +33,9 @@ const selectedProjects: Project[] = [
     artifacts: ['Interactive Quarto Book', "Master's Thesis", 'Hugging Face / Streamlit Demo', 'GitHub Repository'],
     actions: [
       { label: 'Quarto Book', href: 'https://sanjaykshetri.github.io/tentacles-of-misinformation/' },
-      { label: 'GitHub', href: 'https://github.com/sanjaykshetri' },
+      { label: 'Live Dashboard', href: 'https://huggingface.co/spaces/sanjaykshetri/tentacles' },
+      { label: 'View Code', href: 'https://github.com/sanjaykshetri/tentacles-of-misinformation/blob/main/capstone_notebook.ipynb' },
+      { label: 'GitHub', href: 'https://github.com/sanjaykshetri/tentacles-of-misinformation' },
     ],
   },
   {
@@ -43,7 +45,9 @@ const selectedProjects: Project[] = [
     technologies: ['Python', 'SQL', 'Streamlit', 'Pandas', 'Data Visualization'],
     artifacts: ['Interactive Dashboard', 'Jupyter Notebook', 'GitHub Repository'],
     actions: [
-      { label: 'GitHub', href: 'https://github.com/sanjaykshetri' },
+      { label: 'Live Demo', href: 'https://chhetriteacherassist.streamlit.app/' },
+      { label: 'View Code', href: 'https://github.com/sanjaykshetri/Teacher_Assistant_Dashboard/blob/main/Teacher_Assistant_Dashboard_Technical_Report.ipynb' },
+      { label: 'GitHub', href: 'https://github.com/sanjaykshetri/Teacher_Assistant_Dashboard' },
     ],
   },
   {
@@ -53,7 +57,9 @@ const selectedProjects: Project[] = [
     technologies: ['Python', 'SBERT', 'Sentence Transformers', 'Streamlit', 'Recommendation Systems'],
     artifacts: ['Live Streamlit App', 'Jupyter Notebook', 'GitHub Repository'],
     actions: [
-      { label: 'GitHub', href: 'https://github.com/sanjaykshetri' },
+      { label: 'Live Demo', href: 'https://schhetribooksrecommend.streamlit.app/' },
+      { label: 'View Code', href: 'https://github.com/sanjaykshetri/emotion-based-book-recommender/blob/main/notebooks/project_summary.ipynb' },
+      { label: 'GitHub', href: 'https://github.com/sanjaykshetri/emotion-based-book-recommender' },
     ],
   },
   {
