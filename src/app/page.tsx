@@ -109,11 +109,11 @@ export default function HomePage() {
           </h1>
 
           <p className="text-base md:text-lg font-semibold tracking-wide text-gray-600 dark:text-gray-300 mb-5 uppercase">
-            Data Scientist | Machine Learning | Behavioral AI
+            Data Scientist | Cognitive & Behavioral Scientist
           </p>
 
           <p className="text-xl md:text-2xl text-gray-500 dark:text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-            I build human-centered machine learning systems that turn complex data into trustworthy decisions.
+            My work sits at the intersection of machine learning, behavioral science, and applied research. Drawing on a background in cognitive science, behavioral research, and quantitative methods, I build human-centered AI and machine learning systems that help people make better decisions from complex data.
           </p>
 
           <div className="flex flex-wrap gap-3 justify-center mb-16">
