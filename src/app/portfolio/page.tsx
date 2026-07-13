@@ -69,7 +69,9 @@ const selectedProjects: Project[] = [
     technologies: ['R', 'Statistical Modeling', 'Experimental Design', 'Behavioral Science'],
     artifacts: ['Published Journal Paper', 'PDF', 'GitHub Repository (analysis/code, if available)'],
     actions: [
-      { label: 'GitHub', href: 'https://github.com/sanjaykshetri' },
+      { label: 'Published Article', href: 'https://link.springer.com/article/10.1007/s10919-026-00511-9' },
+      { label: 'View PDF', href: '/facemask%20paper%20journal%20of%20nonverbal%20behavior.pdf' },
+      { label: 'GitHub', href: 'https://github.com/sanjaykshetri/Face_mask_study/blob/main/norming_data_analysis.Rmd' },
     ],
   },
 ]
