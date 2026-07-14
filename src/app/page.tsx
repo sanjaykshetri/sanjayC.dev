@@ -67,8 +67,8 @@ const featuredProjects = [
   },
   {
     title: 'Published Behavioral Research',
-    description: 'Behavioral science work on face masks, first impressions, race, and time perception.',
-    tags: ['Behavioral Science', 'Research', 'Experimental Design'],
+    description: 'Master\'s thesis research on cognitive correlates of vulnerability to misinformation.',
+    tags: ['Misinformation', 'Behavioral Science', 'Cognitive Science'],
     href: '/portfolio#published-research',
   },
 ]

@@ -75,17 +75,34 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="section-padding bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-950">
         <div className="section-container">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider mb-3">About</p>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Sanjay Chhetri
-            </h1>
-            <p className="text-xl text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
-              Data Scientist | Cognitive & Behavioral Scientist
-            </p>
-            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
-              My work sits at the intersection of machine learning, behavioral science, and applied research. Drawing on a background in cognitive science, behavioral research, and quantitative methods, I build human-centered AI and machine learning systems that help people make better decisions from complex data.
-            </p>
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
+            <div>
+              <p className="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider mb-3">About</p>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                Sanjay Chhetri
+              </h1>
+              <p className="text-xl text-gray-500 dark:text-gray-400 leading-relaxed mb-6">
+                Data Scientist | Cognitive & Behavioral Scientist
+              </p>
+              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl">
+                My work sits at the intersection of machine learning, behavioral science, and applied research. Drawing on a background in cognitive science, behavioral research, and quantitative methods, I build human-centered AI and machine learning systems that help people make better decisions from complex data.
+              </p>
+            </div>
+
+            <div className="lg:justify-self-end w-full max-w-md">
+              <Card className="overflow-hidden border-primary-100 dark:border-primary-900 bg-gray-900 shadow-xl">
+                <div className="relative aspect-[4/5]">
+                  <Image
+                    src="/fullshot.png"
+                    alt="Sanjay Chhetri portrait"
+                    fill
+                    priority
+                    className="object-cover object-center"
+                    sizes="(min-width: 1024px) 28rem, 100vw"
+                  />
+                </div>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -100,7 +117,7 @@ export default function AboutPage() {
                 <li><span className="font-semibold">Location:</span> Greater Baltimore, Maryland</li>
                 <li><span className="font-semibold">Open to:</span> Data Scientist, Applied AI, Machine Learning, Research Scientist roles</li>
                 <li><span className="font-semibold">Specialties:</span> NLP, Behavioral AI, Trustworthy AI, Recommendation Systems</li>
-                <li><span className="font-semibold">Publications:</span> 1 peer-reviewed journal article</li>
+                <li><span className="font-semibold">Publications:</span> 1 peer-reviewed journal article, 1 master's thesis</li>
                 <li><span className="font-semibold">Flagship Projects:</span> 4 featured projects</li>
               </ul>
             </Card>
@@ -261,10 +278,13 @@ export default function AboutPage() {
           />
           <div className="max-w-4xl mx-auto space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
             <p>
+              Chhetri, S. K. (2025). Who Falls for Online Misinformation: Examining the Cognitive Correlates of Vulnerability to Misinformation [Master's thesis, Montclair State University]. Digital Commons at Montclair.
+            </p>
+            <p>
               Bjornsdottir, R.T., Wilson, J.P., & Chhetri, S. (2026). The Effect of Medical Face Masks on First Impressions Across Race and Time: Testing Social and Perceptual Explanations. Journal of Nonverbal Behavior.
             </p>
             <p>
-              Additional technical writing, project documentation, and research reports are available throughout this portfolio.
+              The full thesis is available through Montclair State University Digital Commons, along with the project repository and PDF copy linked from the Research section.
             </p>
           </div>
         </div>

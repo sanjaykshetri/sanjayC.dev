@@ -63,7 +63,19 @@ const selectedProjects: Project[] = [
     ],
   },
   {
-    id: 'published-research',
+    id: 'masters-thesis',
+    title: "Master's Thesis: Vulnerability to Misinformation",
+    oneLine: 'Behavioral research on how cognitive reflection, conspiracy mentality, and bullshit receptivity relate to verifying online information and vulnerability to misinformation.',
+    technologies: ['R', 'Structural Equation Modeling', 'Cognitive Reflection Test', 'Mediation Analysis', 'Behavioral Science'],
+    artifacts: ['Master\'s Thesis PDF', 'Digital Commons Article', 'GitHub Repository'],
+    actions: [
+      { label: 'Published Article', href: 'https://digitalcommons.montclair.edu/etd/1519/' },
+      { label: 'View PDF', href: '/Who%20Falls%20for%20Online%20Misinformation_%20Examining%20the%20Cognitive%20Corr.pdf' },
+      { label: 'GitHub', href: 'https://github.com/sanjaykshetri/Misinformation-study-Masters-Thesis' },
+    ],
+  },
+  {
+    id: 'face-mask-research',
     title: 'Face Mask Research',
     oneLine: 'Peer-reviewed behavioral science research investigating how medical face masks influence first impressions across race and time.',
     technologies: ['R', 'Statistical Modeling', 'Experimental Design', 'Behavioral Science'],
