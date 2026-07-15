@@ -51,6 +51,19 @@ const selectedProjects: Project[] = [
     ],
   },
   {
+    id: 'edu-vision-action-detection',
+    title: 'Edu Vision: Classroom Action Detection',
+    featured: true,
+    oneLine: 'A computer vision pipeline for detecting observable student classroom actions (for example, hand raised, writing, looking at the board) using PyTorch and ResNet, built as a modular ML foundation for a future Teacher Assistant Dashboard.',
+    technologies: ['Python', 'PyTorch', 'ResNet', 'Computer Vision', 'Streamlit', 'Educational Analytics'],
+    artifacts: ['Live Streamlit Demo', 'Project Report Notebook', 'GitHub Repository'],
+    actions: [
+      { label: 'Live Demo', href: 'https://schhetri-eduvision.streamlit.app/' },
+      { label: 'View Code', href: 'https://github.com/sanjaykshetri/edu-vision-action-detection/blob/main/edu_vision_app_report.ipynb' },
+      { label: 'GitHub', href: 'https://github.com/sanjaykshetri/edu-vision-action-detection/tree/main' },
+    ],
+  },
+  {
     id: 'emotion-recommender',
     title: 'Emotion-Based Book Recommender',
     oneLine: 'A semantic recommendation system that matches readers with books using transformer embeddings and natural language understanding.',

@@ -60,6 +60,12 @@ const featuredProjects = [
     href: '/portfolio#teacher-assistant',
   },
   {
+    title: 'Edu Vision: Classroom Action Detection',
+    description: 'Computer-vision pipeline for detecting observable classroom actions using PyTorch + ResNet, built for educational analytics workflows.',
+    tags: ['Computer Vision', 'PyTorch', 'Educational Analytics'],
+    href: '/portfolio#edu-vision-action-detection',
+  },
+  {
     title: 'Emotion-Based Book Recommender',
     description: 'NLP recommender system using semantic embeddings to map affective intent to book suggestions.',
     tags: ['NLP', 'Embeddings', 'Recommendation Systems'],
